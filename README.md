@@ -24,5 +24,14 @@ Now, once you've installed Curses and downloaded the repo, let's take a quick lo
 1. `controller.py` is a class responsible for taking user input and ordering the Model to update itself and the View to reflect the changes on the screen 
 1. `main.py` is where the magic happens. It initializes everything and hits the "start" button, launching the input-update-display loop that will only end when the interface's state becomes `end`. You don't need to specifically handle exiting the program - just assign `end` to the `Interface.state` and the program will quit right as it hits the next iteration of the loop
 
+# Making changes
+Building a game or a command line tool out of this stub is a matter of adding new components and, if you so choose, maintaining the intended code structure. It's nice to always have a simple structure to rely on; it allows you to keep your head relatively decluttered on all stages of development since there's not a lot to remember at any given moment.
+
+Add new objects whenever there's need for a distinct new entity class in your program. For example, if you're implementing ranged combat - `missile` might be an object you will need.
+
+Add factories if you think those are necessary for a certain purpose. For example, you might need a factory to spawn enemies or loot hoards based on difficulty level.
+
+Add new interface states when there's a new menu or screen in the program. For example, a fancy character screen displaying different stats and abilities warrants a new state, complete with a separate block in the View's `draw` method.
+
 # Working with Curses
 Curses is a simple enough module to work with. At its core, it allows getting user input and displaying text at specific coordinates of the screen. This guide covers the Python implementation really well: https://docs.python.org/3/howto/curses.html
