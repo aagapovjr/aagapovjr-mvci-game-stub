@@ -14,7 +14,7 @@ First of all, you need to install the Curses library if you don't have it: https
 
 Now, once you've installed Curses and downloaded the repo, let's take a quick look at what's inside, file by file:
 
-> Note: being familiar with the MVC pattern helps here, since the only real difference here is the addition of the `Interface` class. If you're not familar with MVC, a quick read will definitely help - the concept itself is very simple.
+> Note: being familiar with the MVC pattern helps here, since the only real difference here is the addition of the `Interface` class. If you're not familar with MVC, a quick read on that will definitely help - the concept itself is very simple.
 
 1. `object` is a folder containing objects. Objects are business-level items required for the game to make sense. Player character is an object. The goblin the player has to fight is an object. The sword to be used in said fighting is an object. The ground upon which the sword lies is also an object
 1. `factory` is a folder containing factories. Factories are classes responsible for creating instances of objects. For example, a `FactoryEnemy` instance would be able to create `Enemy` instances, ready for use by the game. This approach allows the programmer (you) to separate concepts and set up the whole game's state with a set of controlled, easily modified statements like "make me a level", "make me some enemies" and "make me a player character" instead of just hardcoding everything
