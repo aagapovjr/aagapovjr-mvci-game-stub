@@ -1,4 +1,4 @@
-from factory.factory_thing import FactoryThing
+from factory.thing_factory import ThingFactory
 
 class Model:
     def __init__(self):

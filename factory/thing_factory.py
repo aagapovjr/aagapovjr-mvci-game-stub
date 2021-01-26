@@ -1,6 +1,6 @@
 from object.thing import Thing
 
-class FactoryThing:
+class ThingFactory:
     def __init__(self):
         pass
     
